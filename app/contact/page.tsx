@@ -1,26 +1,20 @@
-import Navigation from "@/components/Navigation";
+import ResizableNavigation from "@/components/ResizableNavigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function Contact() {
   return (
     <div className="">
+      <ResizableNavigation />
       <div>
-        <p className="mb-0 py-3 bg-lime-500 text-center">
-          Want to learn how to build templates like this one? Visit{" "}
-          <a href="#!">www.pixelrocket.store</a>
-        </p>
-      </div>
-      <div>
-        <section className="overflow-hidden">
-          <Navigation />
+        <section className="overflow-hidden pt-24">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl tracking-tight mb-8">
                 Contact Us
               </h1>
               <p className="text-lg text-gray-700">
-                Get in touch with our team. We're here to help with all your IT consulting and technology needs.
+                Get in touch with our team. We're here to help bring your digital product vision to life.
               </p>
             </div>
           </div>
@@ -97,7 +91,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium mb-1">Email</h4>
-                      <p className="text-gray-700">contact@techflow.com</p>
+                      <p className="text-gray-700">hello@peoplesgroup.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">

@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import ResizableNavigation from "@/components/ResizableNavigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,22 +6,16 @@ import Link from "next/link";
 export default function Blog() {
   return (
     <div className="">
+      <ResizableNavigation />
       <div>
-        <p className="mb-0 py-3 bg-lime-500 text-center">
-          Want to learn how to build templates like this one? Visit{" "}
-          <a href="#!">www.pixelrocket.store</a>
-        </p>
-      </div>
-      <div>
-        <section className="overflow-hidden">
-          <Navigation />
+        <section className="overflow-hidden pt-24">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl tracking-tight mb-8">
                 Our Blog
               </h1>
               <p className="text-lg text-gray-700">
-                Insights, news, and updates from the world of technology and IT consulting
+                Insights, case studies, and best practices from our product design and development teams
               </p>
             </div>
           </div>

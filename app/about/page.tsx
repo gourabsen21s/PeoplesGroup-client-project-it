@@ -1,27 +1,50 @@
-import Navigation from "@/components/Navigation";
+import ResizableNavigation from "@/components/ResizableNavigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+
+const teamMembers = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    designation: "Lead Product Designer",
+    image: "/fauna-assets/team/team-member-1.png",
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    designation: "Senior Developer",
+    image: "/fauna-assets/team/team-member-2.png",
+  },
+  {
+    id: 3,
+    name: "Emily Rodriguez",
+    designation: "UX Researcher",
+    image: "/fauna-assets/team/team-member-3.png",
+  },
+  {
+    id: 4,
+    name: "James Wilson",
+    designation: "Engineering Manager",
+    image: "/fauna-assets/team/team-member-4.png",
+  },
+];
 
 export default function About() {
   return (
     <div className="">
+      <ResizableNavigation />
       <div>
-        <p className="mb-0 py-3 bg-lime-500 text-center">
-          Want to learn how to build templates like this one? Visit{" "}
-          <a href="#!">www.pixelrocket.store</a>
-        </p>
-      </div>
-      <div>
-        <section className="overflow-hidden">
-          <Navigation />
+        <section className="overflow-hidden pt-24">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl tracking-tight mb-8">
                 About Us
               </h1>
               <p className="text-lg text-gray-700">
-                We are committed to transforming businesses through cutting-edge technology solutions and
-                strategic IT consulting services.
+                Software specialists, design visionaries and product experts working together to solve complex business challenges.
               </p>
             </div>
           </div>
@@ -32,14 +55,14 @@ export default function About() {
           <div className="flex flex-wrap items-center -mx-4">
             <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
               <div className="max-w-lg">
-                <h2 className="font-heading text-4xl sm:text-5xl mb-6">Our Mission</h2>
+                <h2 className="font-heading text-4xl sm:text-5xl mb-6">Our Approach</h2>
                 <p className="text-lg text-gray-700 mb-6">
-                  Our mission is to accelerate digital transformation for organizations worldwide by
-                  providing innovative technology solutions that are scalable, secure, and tailored to specific business needs.
+                  We leverage proven AI tools and modern development practices to deliver high-quality results faster.
+                  Our seasoned teams combine strategic thinking with hands-on expertise to build solutions that matter.
                 </p>
                 <p className="text-lg text-gray-700">
-                  We believe in the power of technology to drive innovation, improve efficiency, and
-                  create lasting competitive advantages for businesses of all sizes.
+                  All software, zero bullshit. We focus on what works, delivering on time and within budget
+                  while maintaining the highest standards of quality and transparency.
                 </p>
               </div>
             </div>
@@ -61,33 +84,33 @@ export default function About() {
             <h2 className="font-heading text-4xl sm:text-5xl mb-6">Our Values</h2>
             <p className="text-lg text-gray-700">The principles that guide everything we do</p>
           </div>
-          <div className="flex flex-wrap -mx-4">
-            <div className="w-full md:w-1/3 px-4 mb-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-medium mb-4">Excellence</h3>
-                <p className="text-gray-700">
-                  We are dedicated to delivering exceptional quality in every project, leveraging best
-                  practices and cutting-edge technologies to exceed client expectations.
+          <div className="flex flex-wrap -mx-4 justify-center">
+            <div className="w-full md:w-1/3 px-4 mb-12">
+              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
+                <h3 className="text-2xl font-medium mb-4 text-center">Be 1% better every day</h3>
+                <p className="text-gray-700 text-center">
+                  We continually reinforce growth mindset values by giving our team opportunities to evolve
+                  and move forward with their professional growth day in, day out.
                 </p>
-              </div>
+              </BackgroundGradient>
             </div>
-            <div className="w-full md:w-1/3 px-4 mb-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-medium mb-4">Innovation</h3>
-                <p className="text-gray-700">
-                  We continuously push the boundaries of what's possible with technology, staying ahead
-                  of industry trends and emerging solutions.
+            <div className="w-full md:w-1/3 px-4 mb-12">
+              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
+                <h3 className="text-2xl font-medium mb-4 text-center">Make things happen</h3>
+                <p className="text-gray-700 text-center">
+                  We don't wait for things to happen. We make things happen. Taking initiative is a major
+                  factor in building proactive and accountable teams.
                 </p>
-              </div>
+              </BackgroundGradient>
             </div>
-            <div className="w-full md:w-1/3 px-4 mb-8">
-              <div className="text-center">
-                <h3 className="text-2xl font-medium mb-4">Partnership</h3>
-                <p className="text-gray-700">
-                  We build long-term relationships with our clients, working collaboratively to
-                  understand their needs and deliver solutions that drive real business value.
+            <div className="w-full md:w-1/3 px-4 mb-12">
+              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
+                <h3 className="text-2xl font-medium mb-4 text-center">Zero bullshit</h3>
+                <p className="text-gray-700 text-center">
+                  We empower strong and transparent relationships with both our clients and employees.
+                  Bringing them better work experience is not a suggestion, it's a requirement.
                 </p>
-              </div>
+              </BackgroundGradient>
             </div>
           </div>
         </div>
@@ -96,26 +119,12 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl sm:text-5xl mb-6">Our Team</h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 mb-12">
               Meet the passionate individuals driving our mission forward
             </p>
-          </div>
-          <div className="flex flex-wrap -mx-4">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
-                <div className="text-center">
-                  <Image
-                    className="w-full rounded-2xl mb-4"
-                    src={`/fauna-assets/team/team-member-${i}.png`}
-                    alt="Team Member"
-                    width={300}
-                    height={300}
-                  />
-                  <h4 className="text-xl font-medium mb-1">Team Member {i}</h4>
-                  <p className="text-gray-700">Position</p>
-                </div>
-              </div>
-            ))}
+            <div className="flex flex-row items-center justify-center mb-10 w-full">
+              <AnimatedTooltip items={teamMembers} />
+            </div>
           </div>
         </div>
       </section>

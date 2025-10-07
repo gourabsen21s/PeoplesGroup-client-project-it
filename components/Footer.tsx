@@ -120,11 +120,11 @@ export default function Footer() {
           <div className="w-full md:w-5/12 lg:w-4/12 px-4">
             <div className="max-w-sm p-8 bg-teal-900 rounded-2xl mx-auto md:mr-0">
               <h5 className="text-xl font-medium text-white mb-4">
-                Your Source for Tech Innovation Updates
+                Stay Updated
               </h5>
               <p className="text-sm text-white opacity-80 leading-normal mb-10">
-                Stay in the loop with our Tech Insights newsletter, where we deliver bite-sized
-                insights into the latest technology trends and IT solutions.
+                Get the latest insights on product design, development best practices, and digital innovation
+                delivered to your inbox.
               </p>
               <div className="flex flex-col">
                 <input

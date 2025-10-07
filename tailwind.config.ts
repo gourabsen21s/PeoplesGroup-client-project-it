@@ -182,6 +182,19 @@ const config: Config = {
             ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
             pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
             bounce: "bounce 1s infinite",
+            spotlight: "spotlight 2s ease .75s 1 forwards",
+          },
+          keyframes: {
+            spotlight: {
+              "0%": {
+                opacity: "0",
+                transform: "translate(-72%, -62%) scale(0.5)",
+              },
+              "100%": {
+                opacity: "1",
+                transform: "translate(-50%,-40%) scale(1)",
+              },
+            },
           },
           backgroundColor: (theme: any) => ({
             ...theme("colors"),

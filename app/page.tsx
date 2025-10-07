@@ -1,19 +1,18 @@
-import Navigation from "@/components/Navigation";
+import ResizableNavigation from "@/components/ResizableNavigation";
 import Footer from "@/components/Footer";
 import FAQAccordionItem from "@/components/FAQAccordion";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import Image from "next/image";
 import Link from "next/link";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function Home() {
   return (
     <div className="">
-      <div>
-        <p className="mb-0 py-3 bg-lime-500 text-center">
-          Want to learn how to build templates like this one? Visit{" "}
-          <a href="#!">www.pixelrocket.store</a>
-        </p>
-      </div>
+      <ResizableNavigation />
       <div>
         <section className="relative bg-teal-900">
           <Image
@@ -23,24 +22,27 @@ export default function Home() {
             width={1920}
             height={1080}
           />
-          <Navigation variant="white" />
-          <div className="relative pt-18 pb-24 sm:pb-32 lg:pt-36 lg:pb-62">
+          <div className="relative pt-32 pb-24 sm:pb-32 lg:pt-48 lg:pb-62">
             <div className="container mx-auto px-4 relative">
               <div className="max-w-lg xl:max-w-xl mx-auto text-center">
                 <h1 className="font-heading text-5xl xs:text-7xl xl:text-8xl tracking-tight text-white mb-8">
-                  Transforming Business Through Technology
+                  Human & The Machine
                 </h1>
                 <p className="max-w-md xl:max-w-none text-lg text-white opacity-80 mb-10">
-                  Our commitment to innovation drives digital transformation for businesses worldwide.
-                  Partner with us on a journey towards a future where cutting-edge technology solutions
-                  empower your organization to achieve unprecedented growth and efficiency.
+                  Our seasoned engineering and design teams leverage proven AI tools to deliver high-quality results, faster.
+                  We build robust solutions with the right tech stack for each job, ensuring we deliver on time and within budget.
+                  All software, zero bullshit.
                 </p>
-                <a
-                  href="#!"
-                  className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-teal-900 border border-lime-500 hover:border-white bg-lime-500 hover:bg-white rounded-full transition duration-200"
-                >
-                  See our solutions
-                </a>
+                <div className="flex justify-center">
+                  <HoverBorderGradient
+                    as="a"
+                    href="#!"
+                    containerClassName="rounded-full"
+                    className="bg-lime-500 text-teal-900 font-medium text-lg hover:bg-lime-400 px-8 py-3"
+                  >
+                    See our solutions
+                  </HoverBorderGradient>
+                </div>
               </div>
             </div>
           </div>
@@ -100,7 +102,7 @@ export default function Home() {
               <span className="inline-block ml-2 text-sm font-medium">Solutions</span>
             </div>
             <div className="border-t border-teal-900 border-opacity-25 pt-14">
-              <h1 className="font-heading text-4xl sm:text-6xl mb-24">Key to digital success</h1>
+              <h1 className="font-heading text-4xl sm:text-6xl mb-24">Our services</h1>
               <div className="flex flex-wrap -mx-4">
                 <div className="w-full sm:w-1/2 px-4 mb-16">
                   <div>
@@ -120,11 +122,9 @@ export default function Home() {
                       <circle cx="32" cy="16" r="4" fill="#022C22" />
                     </svg>
                     <div className="mt-6">
-                      <h5 className="text-2xl font-medium mb-3">Cloud Solutions</h5>
+                      <h5 className="text-2xl font-medium mb-3">Strategy</h5>
                       <p className="mb-6">
-                        Modern cloud infrastructure enables businesses to scale efficiently and securely.
-                        Our solutions help organizations migrate, optimize, and manage their cloud
-                        environments for maximum performance and cost-effectiveness.
+                        Product discovery workshops, design sprints, user research, user interviews, and product planning are some techniques we use before jumping to the design itself.
                       </p>
                       <a href="#!" className="inline-block text-lg  font-medium hover:text-teal-700">
                         Read more
@@ -203,11 +203,9 @@ export default function Home() {
                       />
                     </svg>
                     <div className="mt-6">
-                      <h5 className="text-2xl font-medium mb-3">Custom Software Development</h5>
+                      <h5 className="text-2xl font-medium mb-3">Product design</h5>
                       <p className="mb-6">
-                        Tailored software solutions designed specifically for your business needs.
-                        Our expert developers build scalable, maintainable applications using modern
-                        technologies and best practices.
+                        Producing, prototyping and testing sketches, high-fidelity wireframes and the final UI is a process that results in intuitive and impactful design that's easy on the eyes.
                       </p>
                       <a href="#!" className="inline-block text-lg  font-medium hover:text-teal-700">
                         Read more
@@ -276,11 +274,9 @@ export default function Home() {
                       />
                     </svg>
                     <div className="mt-6">
-                      <h5 className="text-2xl font-medium mb-3">Cybersecurity</h5>
+                      <h5 className="text-2xl font-medium mb-3">Development</h5>
                       <p className="mb-6">
-                        Comprehensive security solutions to protect your digital assets and data.
-                        We implement industry-leading security practices, conduct audits, and provide
-                        ongoing monitoring to keep your business secure.
+                        With GitHub Copilot and ChatGPT, our AI-powered engineering, combined with the right tech stack for each job, ensures we deliver robust solutions on time and within budget.
                       </p>
                       <a href="#!" className="inline-block text-lg  font-medium hover:text-teal-700">
                         Read more
@@ -307,11 +303,9 @@ export default function Home() {
                       />
                     </svg>
                     <div className="mt-6">
-                      <h5 className="text-2xl font-medium mb-3">Digital Transformation</h5>
+                      <h5 className="text-2xl font-medium mb-3">Marketing & growth</h5>
                       <p className="mb-6">
-                        Strategic consulting to modernize your business processes and technology stack.
-                        We help organizations leverage emerging technologies like AI, IoT, and automation
-                        to drive innovation and competitive advantage.
+                        By understanding the mechanics of digital marketing, we make sure to put your product, at the right time, in front of the right people.
                       </p>
                       <a href="#!" className="inline-block text-lg  font-medium hover:text-teal-700">
                         Read more
@@ -328,7 +322,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto mb-24 text-center">
             <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl tracking-sm mb-16">
-              Our commitment to innovation empowers businesses to thrive in the digital age through transformative technology solutions.
+              We build digital products that drive growth and innovation for businesses worldwide.
             </h1>
             <a
               href="#!"
@@ -395,6 +389,59 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="py-12 lg:py-24 bg-orange-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl tracking-sm mb-8">
+              Clever, creative, collaborative.
+            </h1>
+            <p className="text-xl text-gray-700 leading-relaxed">
+              What is Peoples Group in a nutshell? Individually, we're software specialists, design visionaries and product experts. Together, we're a group of competent folks solving complex matters.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="py-12 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-6">Our Core Values</h1>
+          </div>
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full md:w-1/2 px-4 mb-12">
+              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
+                <h3 className="text-2xl font-bold mb-4">Be 1% better every day</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We continually reinforce growth mindset values by giving our team opportunities to evolve and move forward with their professional growth day in, day out.
+                </p>
+              </BackgroundGradient>
+            </div>
+            <div className="w-full md:w-1/2 px-4 mb-12">
+              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
+                <h3 className="text-2xl font-bold mb-4">Make things happen</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We don't wait for things to happen. We make things happen. Taking initiative is a major factor in building proactive and accountable teams.
+                </p>
+              </BackgroundGradient>
+            </div>
+            <div className="w-full md:w-1/2 px-4 mb-12">
+              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
+                <h3 className="text-2xl font-bold mb-4">All for one and one for all</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We listen, acknowledge, and put people where they play best. Cultivating team spirit as the prime value increases inspiration, work proficiency, and escalates the probability of success.
+                </p>
+              </BackgroundGradient>
+            </div>
+            <div className="w-full md:w-1/2 px-4 mb-12">
+              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
+                <h3 className="text-2xl font-bold mb-4">Zero bullshit</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We empower strong and transparent relationships with both our clients and employees. Bringing them better work experience is not a suggestion, it's a requirement.
+                </p>
+              </BackgroundGradient>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-12 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
@@ -403,24 +450,24 @@ export default function Home() {
           </div>
           <div className="max-w-4xl mx-auto">
             <FAQAccordionItem
-              question="What IT services do you offer?"
-              answer="We provide comprehensive IT services including cloud infrastructure, custom software development, cybersecurity solutions, digital transformation consulting, DevOps implementation, and ongoing technical support to meet your business needs."
+              question="What services do you offer?"
+              answer="We offer Strategy (product discovery, design sprints, user research), Product Design (wireframing, prototyping, UI design), Development (AI-powered engineering with modern tech stacks), and Marketing & Growth (digital marketing and product positioning)."
             />
             <FAQAccordionItem
-              question="How does cloud migration benefit my business?"
-              answer="Cloud migration offers scalability, reduced infrastructure costs, improved disaster recovery, enhanced collaboration, and the ability to access resources from anywhere. We handle the entire migration process to ensure minimal disruption to your operations."
+              question="How do you leverage AI in your development process?"
+              answer="We use GitHub Copilot and ChatGPT to accelerate development while maintaining high quality. Our AI-powered engineering approach, combined with the right tech stack for each job, ensures we deliver robust solutions on time and within budget."
             />
             <FAQAccordionItem
-              question="What industries do you specialize in?"
-              answer="We serve clients across various industries including finance, healthcare, retail, manufacturing, and technology startups. Our team has deep expertise in developing industry-specific solutions that address unique challenges and regulatory requirements."
+              question="What makes your approach different?"
+              answer="All software, zero bullshit. We focus on transparency, proactive communication, and delivering what works. Our teams combine strategic thinking with hands-on expertise, and we make things happen rather than waiting for them to happen."
             />
             <FAQAccordionItem
-              question="What is your approach to cybersecurity?"
-              answer="We implement a comprehensive, multi-layered security approach including network security, endpoint protection, regular vulnerability assessments, security training, incident response planning, and compliance management to protect your digital assets."
+              question="Do you work with startups or enterprises?"
+              answer="Both! We work with innovative startups looking to build their first product and established enterprises seeking to modernize their technology stack. Our agile team structure scales to meet the needs of organizations of any size."
             />
             <FAQAccordionItem
-              question="How long does a typical software development project take?"
-              answer="Project timelines vary based on complexity and scope. Simple applications may take 2-3 months, while enterprise solutions can take 6-12 months. We use agile methodologies to deliver incremental value throughout the development process and ensure transparency at every stage."
+              question="How do discovery workshops work?"
+              answer="Discovery workshops help us understand your vision and requirements before jumping into design and development. We use techniques like design sprints, user interviews, and product planning to define a clear roadmap from idea to realization."
             />
             <div className="sm:flex py-10 px-5 sm:px-10 bg-orange-50 rounded-2xl">
               <div className="mb-4 sm:mb-0 sm:mr-6">

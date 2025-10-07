@@ -1,25 +1,19 @@
-import Navigation from "@/components/Navigation";
+import ResizableNavigation from "@/components/ResizableNavigation";
 import Footer from "@/components/Footer";
 
 export default function Pricing() {
   return (
     <div className="">
+      <ResizableNavigation />
       <div>
-        <p className="mb-0 py-3 bg-lime-500 text-center">
-          Want to learn how to build templates like this one? Visit{" "}
-          <a href="#!">www.pixelrocket.store</a>
-        </p>
-      </div>
-      <div>
-        <section className="overflow-hidden">
-          <Navigation />
+        <section className="overflow-hidden pt-24">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl tracking-tight mb-8">
                 Pricing Plans
               </h1>
               <p className="text-lg text-gray-700">
-                Choose the perfect plan for your IT consulting and technology needs
+                Flexible engagement models to match your product development needs
               </p>
             </div>
           </div>
@@ -50,7 +44,7 @@ export default function Pricing() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>IT strategy consultation</span>
+                    <span>Product strategy workshop</span>
                   </li>
                   <li className="mb-3 flex items-start">
                     <svg
@@ -66,7 +60,7 @@ export default function Pricing() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>Cloud infrastructure setup</span>
+                    <span>UX/UI design & prototyping</span>
                   </li>
                   <li className="mb-3 flex items-start">
                     <svg
@@ -134,7 +128,7 @@ export default function Pricing() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>Custom software development</span>
+                    <span>Full-stack development</span>
                   </li>
                   <li className="mb-3 flex items-start">
                     <svg
@@ -150,7 +144,7 @@ export default function Pricing() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>DevOps & CI/CD pipeline</span>
+                    <span>Marketing & growth support</span>
                   </li>
                   <li className="mb-3 flex items-start">
                     <svg
@@ -215,7 +209,7 @@ export default function Pricing() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>Enterprise-scale architecture</span>
+                    <span>Dedicated development team</span>
                   </li>
                   <li className="mb-3 flex items-start">
                     <svg
@@ -231,7 +225,7 @@ export default function Pricing() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>Dedicated account manager</span>
+                    <span>Product manager & designer</span>
                   </li>
                   <li className="mb-3 flex items-start">
                     <svg
@@ -247,7 +241,7 @@ export default function Pricing() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span>Custom solutions & integrations</span>
+                    <span>Custom tech stack & architecture</span>
                   </li>
                 </ul>
                 <a
