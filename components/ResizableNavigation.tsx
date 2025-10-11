@@ -34,11 +34,11 @@ export default function ResizableNavigation({ variant = "default" }: ResizableNa
         <NavBody>
           <Link href="/" className="flex items-center">
             <Image
-              className="h-6 w-auto"
-              src="/images/logo.svg"
-              alt="Logo"
-              width={120}
-              height={32}
+              className="h-10 w-auto" 
+              src="/images/logo-people.svg"
+              alt="People's Group logo"
+              width={6590} 
+              height={780} 
             />
           </Link>
 
@@ -46,9 +46,6 @@ export default function ResizableNavigation({ variant = "default" }: ResizableNa
 
           <div className="flex items-center space-x-2">
             <div className="hidden md:flex items-center space-x-2">
-              <NavbarButton href="/login" variant="secondary" as={Link}>
-                Login
-              </NavbarButton>
               <NavbarButton href="/contact" variant="primary" as={Link}>
                 Get in touch
               </NavbarButton>
@@ -65,11 +62,11 @@ export default function ResizableNavigation({ variant = "default" }: ResizableNa
         <MobileNavHeader>
           <Link href="/" onClick={() => setMobileNavOpen(false)}>
             <Image
-              className="h-6 w-auto"
-              src="/fauna-assets/logos/sign-logo-flow.svg"
-              alt="Logo"
-              width={120}
-              height={32}
+              className="h-8 w-auto" // Adjusted for a bigger logo
+              src="/images/peoples-group-logo.svg"
+              alt="People's Group logo"
+              width={180} // Increased width
+              height={48} // Increased height
             />
           </Link>
           <MobileNavToggle
@@ -82,16 +79,13 @@ export default function ResizableNavigation({ variant = "default" }: ResizableNa
             <Link
               key={index}
               href={item.link}
-              className="text-lg font-medium text-neutral-700 hover:text-lime-500 transition-colors py-2"
+              className="text-lg font-medium text-neutral-700 hover:text-cyan-500 transition-colors py-2"
               onClick={() => setMobileNavOpen(false)}
             >
               {item.name}
             </Link>
           ))}
           <div className="flex flex-col space-y-2 pt-4 border-t border-neutral-200">
-            <NavbarButton href="/login" variant="secondary" as={Link}>
-              Login
-            </NavbarButton>
             <NavbarButton href="/contact" variant="primary" as={Link}>
               Get in touch
             </NavbarButton>
@@ -101,4 +95,3 @@ export default function ResizableNavigation({ variant = "default" }: ResizableNa
     </>
   );
 }
-

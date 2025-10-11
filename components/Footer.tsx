@@ -1,21 +1,40 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 
 export default function Footer() {
   return (
-    <section className="relative py-12 lg:py-24 bg-orange-50 overflow-hidden">
-      <Image
-        className="absolute bottom-0 left-0"
-        src="/fauna-assets/footer/waves-lines-left-bottom.png"
-        alt=""
-        width={300}
-        height={300}
-      />
-      <div className="container px-4 mx-auto relative">
+    <section className="p-4 bg-white overflow-hidden">
+      <div className="relative py-12 lg:py-24 rounded-3xl overflow-hidden">
+        <BackgroundGradientAnimation
+          gradientBackgroundStart="rgb(255, 237, 213)"
+          gradientBackgroundEnd="rgb(253, 186, 116)"
+          firstColor="251, 146, 60"
+          secondColor="254, 215, 170"
+          thirdColor="251, 191, 36"
+          fourthColor="253, 186, 116"
+          fifthColor="252, 211, 77"
+          pointerColor="234, 88, 12"
+          size="80%"
+          blendingValue="hard-light"
+          containerClassName="absolute inset-0"
+          className="absolute inset-0"
+          interactive={false}
+        />
+        <Image
+          className="absolute bottom-0 left-0 z-0 opacity-20"
+          src="/fauna-assets/footer/waves-lines-left-bottom.png"
+          alt=""
+          width={300}
+          height={300}
+        />
+      <div className="container px-4 mx-auto relative z-10">
         <div className="flex flex-wrap mb-16 -mx-4">
           <div className="w-full lg:w-2/12 xl:w-2/12 px-4 mb-16 lg:mb-0">
             <Link className="inline-block mb-4" href="/">
-              <Image src="/images/logo.svg" alt="Logo" width={120} height={32} />
+              <Image src="/images/logo-people.svg" alt="Logo" width={120} height={32} />
             </Link>
           </div>
           <div className="w-full md:w-7/12 lg:w-6/12 px-4 mb-16 lg:mb-0">
@@ -25,7 +44,7 @@ export default function Footer() {
                 <ul>
                   <li className="mb-4">
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       Solutions
@@ -33,7 +52,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-4">
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       How it works
@@ -41,7 +60,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       Pricing
@@ -54,7 +73,7 @@ export default function Footer() {
                 <ul>
                   <li className="mb-4">
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       Blog
@@ -62,7 +81,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-4">
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       Help Center
@@ -70,7 +89,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       Support
@@ -83,7 +102,7 @@ export default function Footer() {
                 <ul>
                   <li className="mb-4">
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       About
@@ -91,7 +110,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-4">
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       Our Mission
@@ -99,7 +118,7 @@ export default function Footer() {
                   </li>
                   <li className="mb-4">
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       Careers
@@ -107,7 +126,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+                      className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
                       href="#!"
                     >
                       Contact
@@ -129,12 +148,12 @@ export default function Footer() {
               <div className="flex flex-col">
                 <input
                   type="email"
-                  className="h-12 w-full px-4 py-1 placeholder-gray-700 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow rounded-full"
+                  className="h-12 w-full px-4 py-1 placeholder-gray-700 outline-none ring-offset-0 focus:ring-2 focus:ring-cyan-500 shadow rounded-full"
                   placeholder="Your e-mail..."
                 />
                 <a
                   href="#!"
-                  className="h-12 inline-flex mt-3 py-1 px-5 items-center justify-center font-medium text-teal-900 border border-lime-500 hover:border-white bg-lime-500 hover:bg-white rounded-full transition duration-200"
+                  className="h-12 inline-flex mt-3 py-1 px-5 items-center justify-center font-medium text-white border border-cyan-500 hover:border-teal-900 bg-cyan-500 hover:bg-teal-900 rounded-full transition duration-200"
                 >
                   Get in touch
                 </a>
@@ -144,7 +163,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-wrap -mb-3 justify-between">
           <div className="flex items-center mb-3">
-            <a href="#!" className="inline-block mr-4 text-black hover:text-lime-500">
+            <a href="#!" className="inline-block mr-4 text-black hover:text-cyan-500">
               <svg
                 width="20"
                 height="20"
@@ -160,7 +179,7 @@ export default function Footer() {
                 </g>
               </svg>
             </a>
-            <a href="#!" className="inline-block mr-4 text-black hover:text-lime-500">
+            <a href="#!" className="inline-block mr-4 text-black hover:text-cyan-500">
               <svg
                 width="24"
                 height="24"
@@ -174,7 +193,7 @@ export default function Footer() {
                 />
               </svg>
             </a>
-            <a href="#!" className="inline-block text-black hover:text-lime-500">
+            <a href="#!" className="inline-block text-black hover:text-cyan-500">
               <svg
                 width="24"
                 height="24"
@@ -192,23 +211,16 @@ export default function Footer() {
           <div className="text-center">
             Created by{" "}
             <a
-              className="inline-block text-gray-600 hover:text-lime-500 font-medium"
+              className="inline-block text-gray-600 hover:text-cyan-500 font-medium"
               href="https://www.pixelrocket.store"
               target="_blank"
             >
-              Pixelrocket
-            </a>
-            <span> • Distributed by </span>
-            <a
-              className="inline-block text-gray-600 hover:text-lime-500 font-medium"
-              href="https://www.ThemeWagon.store"
-              target="_blank"
-            >
-              ThemeWagon
+              Peoples Group
             </a>
           </div>
-          <p className="text-sm text-gray-500 mb-3">© 2024 Flow. All rights reserved.</p>
+          <p className="text-sm text-gray-500 mb-3">© 2025 Peoples Group. All rights reserved.</p>
         </div>
+      </div>
       </div>
     </section>
   );

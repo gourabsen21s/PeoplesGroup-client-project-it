@@ -1,3 +1,5 @@
+"use client";
+
 import ResizableNavigation from "@/components/ResizableNavigation";
 import Footer from "@/components/Footer";
 import FAQAccordionItem from "@/components/FAQAccordion";
@@ -8,52 +10,128 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import {
+  Modal,
+  ModalTrigger,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+} from "@/components/ui/animated-modal";
+import { HeroParallax } from "@/components/ui/hero-parallax";
+import { GlareCard } from "@/components/ui/glare-card";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+
+const products = [
+  {
+    title: "E-Commerce Platform",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_95252a5b.jpg",
+  },
+  {
+    title: "Healthcare Dashboard",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_adb4b8ea.jpg",
+  },
+  {
+    title: "Mobile Banking App",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_b4feb97b.jpg",
+  },
+  {
+    title: "Analytics Platform",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_eb204cf8.jpg",
+  },
+  {
+    title: "Social Network",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.52_5368594c.jpg",
+  },
+  {
+    title: "AI Content Studio",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.52_a5f755af.jpg",
+  },
+  {
+    title: "Fintech Solution",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.52_c7b4ab9e.jpg",
+  },
+  {
+    title: "Education Portal",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.53_02dbe1d4.jpg",
+  },
+  {
+    title: "Travel Marketplace",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.53_e2cdec9d.jpg",
+  },
+  {
+    title: "Enterprise CRM",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.53_f9406baa.jpg",
+  },
+  {
+    title: "SaaS Dashboard",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.54_92e16c7d.jpg",
+  },
+  {
+    title: "Workflow Automation",
+    link: "#",
+    thumbnail: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.54_4317a0bf.jpg",
+  },
+];
 
 export default function Home() {
   return (
     <div className="">
       <ResizableNavigation />
-      <div>
-        <section className="relative bg-teal-900">
-          <Image
-            className="absolute top-0 left-0 w-full h-full"
-            src="/fauna-assets/headers/bg-waves.png"
-            alt=""
-            width={1920}
-            height={1080}
-          />
-          <div className="relative pt-32 pb-24 sm:pb-32 lg:pt-48 lg:pb-62">
-            <div className="container mx-auto px-4 relative">
-              <div className="max-w-lg xl:max-w-xl mx-auto text-center">
-                <h1 className="font-heading text-5xl xs:text-7xl xl:text-8xl tracking-tight text-white mb-8">
-                  Human & The Machine
-                </h1>
-                <p className="max-w-md xl:max-w-none text-lg text-white opacity-80 mb-10">
-                  Our seasoned engineering and design teams leverage proven AI tools to deliver high-quality results, faster.
-                  We build robust solutions with the right tech stack for each job, ensuring we deliver on time and within budget.
-                  All software, zero bullshit.
-                </p>
-                <div className="flex justify-center">
-                  <HoverBorderGradient
-                    as="a"
-                    href="#!"
-                    containerClassName="rounded-full"
-                    className="bg-lime-500 text-teal-900 font-medium text-lg hover:bg-lime-400 px-8 py-3"
-                  >
-                    See our solutions
-                  </HoverBorderGradient>
-                </div>
-              </div>
+        <section className="p-4 bg-white overflow-hidden">
+          <div className="relative rounded-3xl overflow-hidden">
+            <BackgroundGradientAnimation
+              gradientBackgroundStart="rgb(13, 148, 136)"
+              gradientBackgroundEnd="rgb(20, 184, 166)"
+              firstColor="20, 184, 166"
+              secondColor="163, 230, 53"
+              thirdColor="94, 234, 212"
+              fourthColor="45, 212, 191"
+              fifthColor="153, 246, 228"
+              pointerColor="190, 242, 100"
+              size="80%"
+              blendingValue="hard-light"
+              containerClassName="absolute inset-0"
+              className="absolute inset-0"
+              interactive={false}
+            />
+            <div className="relative z-10">
+              <HeroParallax products={products} />
             </div>
           </div>
         </section>
-      </div>
-      <section className="py-12 lg:py-24">
-        <div className="container mx-auto px-4">
+        <section className="p-4 bg-white">
+        <div className="relative pt-16 pb-16 px-5 xs:px-8 xl:px-12 rounded-3xl overflow-hidden">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="rgb(255, 237, 213)"
+            gradientBackgroundEnd="rgb(254, 215, 170)"
+            firstColor="255, 154, 158"
+            secondColor="254, 215, 170"
+            thirdColor="251, 191, 36"
+            fourthColor="234, 179, 8"
+            fifthColor="253, 186, 116"
+            pointerColor="251, 146, 60"
+            size="80%"
+            blendingValue="hard-light"
+            containerClassName="absolute inset-0"
+            className="absolute inset-0"
+            interactive={false}
+          />
+          <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full sm:w-1/2 md:w-1/4 px-4 mb-10 md:mb-0">
               <div className="text-center">
-                <h5 className="text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mb-4">500+</h5>
+                  <h5 className="text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold">50+</h5>
                 <span className="text-base lg:text-lg text-gray-700">
                   Projects Delivered
                 </span>
@@ -61,7 +139,7 @@ export default function Home() {
             </div>
             <div className="w-full sm:w-1/2 md:w-1/4 px-4 mb-10 md:mb-0">
               <div className="text-center">
-                <h5 className="text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mb-4">250+</h5>
+                  <h5 className="text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold">10+</h5>
                 <span className="text-base lg:text-lg text-gray-700">
                   Enterprise Clients
                 </span>
@@ -69,7 +147,7 @@ export default function Home() {
             </div>
             <div className="w-full sm:w-1/2 md:w-1/4 px-4 mb-10 sm:mb-0">
               <div className="text-center">
-                <h5 className="text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mb-4">10,000+</h5>
+                  <h5 className="text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold">1000+</h5>
                 <span className="text-base lg:text-lg text-gray-700">
                   Hours of Consulting
                 </span>
@@ -77,18 +155,34 @@ export default function Home() {
             </div>
             <div className="w-full sm:w-1/2 md:w-1/4 px-4">
               <div className="text-center">
-                <h5 className="text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mb-4">98%</h5>
+                  <h5 className="text-2xl xs:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold">98%</h5>
                 <span className="text-base lg:text-lg text-gray-700">
                   Client Satisfaction Rate
                 </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="p-4 bg-white">
-        <div className="pt-16 pb-24 px-5 xs:px-8 xl:px-12 bg-lime-500 rounded-3xl">
-          <div className="container mx-auto px-4">
+      <section id="solutions" className="p-4 bg-white">
+        <div className="relative pt-16 pb-24 px-5 xs:px-8 xl:px-12 rounded-3xl overflow-hidden">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="rgb(190, 242, 100)"
+            gradientBackgroundEnd="rgb(132, 204, 22)"
+            firstColor="163, 230, 53"
+            secondColor="132, 204, 22"
+            thirdColor="190, 242, 100"
+            fourthColor="101, 163, 13"
+            fifthColor="217, 249, 157"
+            pointerColor="163, 230, 53"
+            size="80%"
+            blendingValue="hard-light"
+            containerClassName="absolute inset-0"
+            className="absolute inset-0"
+            interactive={false}
+          />
+          <div className="container mx-auto px-4 relative z-10">
             <div className="flex mb-4 items-center">
               <svg
                 width="8"
@@ -318,79 +412,273 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-12 lg:py-24 overflow-hidden">
-        <div className="container mx-auto px-4">
+      <section className="p-4 bg-white overflow-hidden">
+        <div className="relative pt-16 pb-24 px-5 xs:px-8 xl:px-12 rounded-3xl overflow-hidden">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="rgb(204, 251, 241)"
+            gradientBackgroundEnd="rgb(217, 249, 157)"
+            firstColor="20, 184, 166"
+            secondColor="163, 230, 53"
+            thirdColor="94, 234, 212"
+            fourthColor="132, 204, 22"
+            fifthColor="153, 246, 228"
+            pointerColor="45, 212, 191"
+            size="80%"
+            blendingValue="hard-light"
+            containerClassName="absolute inset-0"
+            className="absolute inset-0"
+            interactive={false}
+          />
+          <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto mb-24 text-center">
             <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl tracking-sm mb-16">
               We build digital products that drive growth and innovation for businesses worldwide.
             </h1>
             <a
               href="#!"
-              className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:text-teal-900 border border-teal-900 hover:border-lime-500 bg-teal-900 hover:bg-lime-500 rounded-full transition duration-200"
+                className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:text-white border border-teal-900 hover:border-cyan-500 bg-teal-900 hover:bg-cyan-500 rounded-full transition duration-200"
             >
               Get in touch
             </a>
           </div>
-          <div className="flex justify-center">
-            <div className="flex-shrink-0 h-full max-w-xs sm:max-w-md md:max-w-xl mr-4 sm:mr-8">
+          <div className="flex justify-center gap-4 sm:gap-8">
+            <Modal>
+              <ModalTrigger className="flex-shrink-0 h-full max-w-xs sm:max-w-md md:max-w-xl group cursor-pointer">
+                <div className="relative overflow-hidden rounded-2xl transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
               <Image
                 className="block w-full"
-                src="/fauna-assets/about/about-image2.png"
-                alt=""
+                    src="/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.52_5368594c.jpg"
+                    alt="Project showcase"
                 width={500}
                 height={500}
               />
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white font-bold text-xl">View Project Details</p>
+                  </div>
+                </div>
+              </ModalTrigger>
+              <ModalBody>
+                <ModalContent>
+                  <h4 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+                    E-Commerce Platform Transformation ✨
+                  </h4>
+                  <p className="text-neutral-600 dark:text-neutral-400 text-base mb-8">
+                    We helped a global retail brand modernize their digital presence with a cutting-edge e-commerce platform, resulting in 300% increase in online sales.
+                  </p>
+                  <div className="space-y-6">
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Challenge</h5>
+                      <p className="text-neutral-600 dark:text-neutral-400">
+                        Outdated technology stack, poor mobile experience, and slow page load times were causing high cart abandonment rates.
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Solution</h5>
+                      <p className="text-neutral-600 dark:text-neutral-400">
+                        Built a modern headless commerce solution using Next.js, integrated with AI-powered product recommendations and personalization.
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Results</h5>
+                      <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-400 space-y-2">
+                        <li>300% increase in online sales</li>
+                        <li>50% reduction in page load time</li>
+                        <li>85% improvement in mobile conversion rate</li>
+                      </ul>
+                    </div>
             </div>
-            <div className="flex-shrink-0 h-full max-w-xs sm:max-w-md md:max-w-xl mr-4 sm:mr-8">
+                </ModalContent>
+                <ModalFooter>
+                  <button className="px-6 py-2 bg-teal-900 text-white rounded-md text-sm hover:bg-black transition-colors">
+                    View Case Study
+                  </button>
+                </ModalFooter>
+              </ModalBody>
+            </Modal>
+
+            <Modal>
+              <ModalTrigger className="flex-shrink-0 h-full max-w-xs sm:max-w-md md:max-w-xl group cursor-pointer">
+                <div className="relative overflow-hidden rounded-2xl transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
               <Image
                 className="block w-full"
-                src="/fauna-assets/about/about-image3.png"
-                alt=""
+                    src="/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_adb4b8ea.jpg"
+                    alt="Project showcase"
                 width={500}
                 height={500}
               />
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white font-bold text-xl">View Project Details</p>
+                  </div>
+                </div>
+              </ModalTrigger>
+              <ModalBody>
+                <ModalContent>
+                  <h4 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+                    AI-Powered Healthcare Platform 🏥
+                  </h4>
+                  <p className="text-neutral-600 dark:text-neutral-400 text-base mb-8">
+                    Developed an intelligent healthcare management system that streamlined patient care and reduced administrative burden by 60%.
+                  </p>
+                  <div className="space-y-6">
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Challenge</h5>
+                      <p className="text-neutral-600 dark:text-neutral-400">
+                        Manual processes, fragmented systems, and difficulty coordinating care across multiple departments.
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Solution</h5>
+                      <p className="text-neutral-600 dark:text-neutral-400">
+                        Created a unified platform with AI-powered scheduling, automated workflows, and real-time patient monitoring dashboards.
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Results</h5>
+                      <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-400 space-y-2">
+                        <li>60% reduction in administrative time</li>
+                        <li>40% improvement in patient satisfaction</li>
+                        <li>99.9% system uptime achieved</li>
+                      </ul>
+                    </div>
             </div>
-            <div className="flex-shrink-0 h-full max-w-xs sm:max-w-md md:max-w-xl mr-4 sm:mr-8">
+                </ModalContent>
+                <ModalFooter>
+                  <button className="px-6 py-2 bg-teal-900 text-white rounded-md text-sm hover:bg-black transition-colors">
+                    View Case Study
+                  </button>
+                </ModalFooter>
+              </ModalBody>
+            </Modal>
+
+            <Modal>
+              <ModalTrigger className="flex-shrink-0 h-full max-w-xs sm:max-w-md md:max-w-xl group cursor-pointer">
+                <div className="relative overflow-hidden rounded-2xl transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
               <Image
                 className="block w-full"
-                src="/fauna-assets/about/about-image4.png"
-                alt=""
+                    src="/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_b4feb97b.jpg"
+                    alt="Project showcase"
                 width={500}
                 height={500}
               />
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white font-bold text-xl">View Project Details</p>
+                  </div>
+                </div>
+              </ModalTrigger>
+              <ModalBody>
+                <ModalContent>
+                  <h4 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+                    FinTech Mobile Banking App 💳
+                  </h4>
+                  <p className="text-neutral-600 dark:text-neutral-400 text-base mb-8">
+                    Built a secure, user-friendly mobile banking application that attracted 100,000+ users in the first 6 months.
+                  </p>
+                  <div className="space-y-6">
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Challenge</h5>
+                      <p className="text-neutral-600 dark:text-neutral-400">
+                        Creating a mobile-first banking experience that balances security with ease of use, while meeting strict regulatory requirements.
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Solution</h5>
+                      <p className="text-neutral-600 dark:text-neutral-400">
+                        Designed and developed a React Native app with biometric authentication, real-time fraud detection, and instant payment processing.
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Results</h5>
+                      <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-400 space-y-2">
+                        <li>100,000+ users in first 6 months</li>
+                        <li>4.8/5 star rating on app stores</li>
+                        <li>Zero security breaches since launch</li>
+                      </ul>
+                    </div>
             </div>
-            <div className="flex-shrink-0 h-full max-w-xs sm:max-w-md md:max-w-xl mr-4 sm:mr-8">
+                </ModalContent>
+                <ModalFooter>
+                  <button className="px-6 py-2 bg-teal-900 text-white rounded-md text-sm hover:bg-black transition-colors">
+                    View Case Study
+                  </button>
+                </ModalFooter>
+              </ModalBody>
+            </Modal>
+
+            <Modal>
+              <ModalTrigger className="hidden md:block flex-shrink-0 h-full max-w-md md:max-w-xl group cursor-pointer">
+                <div className="relative overflow-hidden rounded-2xl transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
               <Image
                 className="block w-full"
-                src="/fauna-assets/about/about-image2.png"
-                alt=""
+                    src="/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_eb204cf8.jpg"
+                    alt="Project showcase"
                 width={500}
                 height={500}
               />
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white font-bold text-xl">View Project Details</p>
+                  </div>
+                </div>
+              </ModalTrigger>
+              <ModalBody>
+                <ModalContent>
+                  <h4 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+                    SaaS Analytics Dashboard 📊
+                  </h4>
+                  <p className="text-neutral-600 dark:text-neutral-400 text-base mb-8">
+                    Created a comprehensive analytics platform that helps businesses make data-driven decisions with real-time insights.
+                  </p>
+                  <div className="space-y-6">
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Challenge</h5>
+                      <p className="text-neutral-600 dark:text-neutral-400">
+                        Companies struggled to make sense of data scattered across multiple platforms and tools.
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Solution</h5>
+                      <p className="text-neutral-600 dark:text-neutral-400">
+                        Built a unified dashboard with AI-powered insights, customizable reports, and seamless third-party integrations.
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-lg mb-2">Results</h5>
+                      <ul className="list-disc list-inside text-neutral-600 dark:text-neutral-400 space-y-2">
+                        <li>500+ enterprise customers</li>
+                        <li>70% faster decision-making process</li>
+                        <li>$2M ARR in first year</li>
+                      </ul>
             </div>
-            <div className="hidden md:block sm:flex-shrink-0 h-full max-w-md md:max-w-xl mr-4 sm:mr-8">
-              <Image
-                className="block w-full"
-                src="/fauna-assets/about/about-image3.png"
-                alt=""
-                width={500}
-                height={500}
-              />
             </div>
-            <div className="hidden md:block sm:flex-shrink-0 h-full max-w-md md:max-w-xl mr-4 sm:mr-8">
-              <Image
-                className="block w-full"
-                src="/fauna-assets/about/about-image4.png"
-                alt=""
-                width={500}
-                height={500}
-              />
+                </ModalContent>
+                <ModalFooter>
+                  <button className="px-6 py-2 bg-teal-900 text-white rounded-md text-sm hover:bg-black transition-colors">
+                    View Case Study
+                  </button>
+                </ModalFooter>
+              </ModalBody>
+            </Modal>
             </div>
           </div>
         </div>
       </section>
-      <section className="py-12 lg:py-24 bg-orange-50">
-        <div className="container mx-auto px-4">
+      <section className="p-4 bg-white">
+        <div className="relative pt-16 pb-24 px-5 xs:px-8 xl:px-12 rounded-3xl overflow-hidden">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="rgb(254, 243, 199)"
+            gradientBackgroundEnd="rgb(253, 224, 71)"
+            firstColor="251, 191, 36"
+            secondColor="254, 215, 170"
+            thirdColor="253, 224, 71"
+            fourthColor="245, 158, 11"
+            fifthColor="253, 230, 138"
+            pointerColor="251, 146, 60"
+            size="80%"
+            blendingValue="hard-light"
+            containerClassName="absolute inset-0"
+            className="absolute inset-0"
+            interactive={false}
+          />
+          <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl tracking-sm mb-8">
               Clever, creative, collaborative.
@@ -398,52 +686,104 @@ export default function Home() {
             <p className="text-xl text-gray-700 leading-relaxed">
               What is Peoples Group in a nutshell? Individually, we're software specialists, design visionaries and product experts. Together, we're a group of competent folks solving complex matters.
             </p>
+            </div>
           </div>
         </div>
       </section>
-      <section className="py-12 lg:py-24">
-        <div className="container mx-auto px-4">
+      <section className="p-4 bg-white">
+        <div className="relative pt-16 pb-24 px-5 xs:px-8 xl:px-12 rounded-3xl overflow-hidden">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="rgb(240, 253, 244)"
+            gradientBackgroundEnd="rgb(204, 251, 241)"
+            firstColor="190, 242, 100"
+            secondColor="20, 184, 166"
+            thirdColor="163, 230, 53"
+            fourthColor="94, 234, 212"
+            fifthColor="167, 243, 208"
+            pointerColor="45, 212, 191"
+            size="80%"
+            blendingValue="hard-light"
+            containerClassName="absolute inset-0"
+            className="absolute inset-0"
+            interactive={false}
+          />
+          <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl mb-6">Our Core Values</h1>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Hover over each card to experience the glare effect
+              </p>
+            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <GlareCard className="border border-black/[0.2] dark:border-white/[0.2]">
+              <div className="flex flex-col items-start p-8 h-[30rem]">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
+                  <span className="text-4xl font-bold text-white">1%</span>
           </div>
-          <div className="flex flex-wrap -mx-4">
-            <div className="w-full md:w-1/2 px-4 mb-12">
-              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
                 <h3 className="text-2xl font-bold mb-4">Be 1% better every day</h3>
                 <p className="text-gray-700 leading-relaxed">
                   We continually reinforce growth mindset values by giving our team opportunities to evolve and move forward with their professional growth day in, day out.
                 </p>
-              </BackgroundGradient>
+              </div>
+            </GlareCard>
+
+            <GlareCard className="border border-black/[0.2] dark:border-white/[0.2]">
+              <div className="flex flex-col items-start p-8 h-[30rem]">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
+                  <span className="text-4xl">🚀</span>
             </div>
-            <div className="w-full md:w-1/2 px-4 mb-12">
-              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
                 <h3 className="text-2xl font-bold mb-4">Make things happen</h3>
                 <p className="text-gray-700 leading-relaxed">
                   We don't wait for things to happen. We make things happen. Taking initiative is a major factor in building proactive and accountable teams.
                 </p>
-              </BackgroundGradient>
+              </div>
+            </GlareCard>
+
+            <GlareCard className="border border-black/[0.2] dark:border-white/[0.2]">
+              <div className="flex flex-col items-start p-8 h-[30rem]">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
+                  <span className="text-4xl">🤝</span>
             </div>
-            <div className="w-full md:w-1/2 px-4 mb-12">
-              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
                 <h3 className="text-2xl font-bold mb-4">All for one and one for all</h3>
                 <p className="text-gray-700 leading-relaxed">
                   We listen, acknowledge, and put people where they play best. Cultivating team spirit as the prime value increases inspiration, work proficiency, and escalates the probability of success.
                 </p>
-              </BackgroundGradient>
+              </div>
+            </GlareCard>
+
+            <GlareCard className="border border-black/[0.2] dark:border-white/[0.2]">
+              <div className="flex flex-col items-start p-8 h-[30rem]">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
+                  <span className="text-4xl">⚡</span>
             </div>
-            <div className="w-full md:w-1/2 px-4 mb-12">
-              <BackgroundGradient className="h-full p-8 bg-white rounded-3xl">
                 <h3 className="text-2xl font-bold mb-4">Zero bullshit</h3>
                 <p className="text-gray-700 leading-relaxed">
                   We empower strong and transparent relationships with both our clients and employees. Bringing them better work experience is not a suggestion, it's a requirement.
                 </p>
-              </BackgroundGradient>
+              </div>
+            </GlareCard>
             </div>
           </div>
         </div>
       </section>
-      <section className="py-12 lg:py-24">
-        <div className="container mx-auto px-4">
+      <section className="p-4 bg-white">
+        <div className="relative pt-16 pb-24 px-5 xs:px-8 xl:px-12 rounded-3xl overflow-hidden">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="rgb(254, 226, 226)"
+            gradientBackgroundEnd="rgb(254, 202, 202)"
+            firstColor="251, 146, 60"
+            secondColor="254, 215, 170"
+            thirdColor="251, 113, 133"
+            fourthColor="252, 165, 165"
+            fifthColor="254, 205, 211"
+            pointerColor="244, 114, 182"
+            size="80%"
+            blendingValue="hard-light"
+            containerClassName="absolute inset-0"
+            className="absolute inset-0"
+            interactive={false}
+          />
+          <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
             <h1 className="font-heading text-6xl mb-6">FAQ</h1>
             <p className="text-gray-700">Here you will find the answers to the frequently asked questions.</p>
@@ -515,13 +855,14 @@ export default function Home() {
                   </span>
                 </p>
               </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <TestimonialSlider />
-      <div>
-        <div>
+      <div className="p-4 bg-white">
+        <div className="pt-8 pb-8 px-5 xs:px-8 xl:px-12 bg-white rounded-3xl">
           <section>
             <div className="p-4">
               <div className="max-w-xl lg:max-w-5xl mx-auto xl:max-w-none px-5 md:px-12 xl:px-24 py-16 bg-teal-900 rounded-2xl">
@@ -532,7 +873,7 @@ export default function Home() {
                         <h1 className="font-heading text-4xl xs:text-5xl sm:text-6xl tracking-sm text-white mb-6">
                           Ready to Transform Your Business?
                         </h1>
-                        <p className="text-lg text-white opacity-80">
+                        <p className="text-lg text-white">
                           Partner with us to unlock the full potential of technology for your organization
                         </p>
                       </div>
@@ -540,7 +881,7 @@ export default function Home() {
                     <div className="w-full lg:w-1/3 px-4 lg:text-right">
                       <a
                         href="#!"
-                        className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-teal-900 border border-lime-500 hover:border-white bg-lime-500 hover:bg-white rounded-full transition duration-200"
+                        className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white border border-cyan-500 hover:border-teal-900 bg-cyan-500 hover:bg-teal-900 rounded-full transition duration-200"
                       >
                         Get Started
                       </a>

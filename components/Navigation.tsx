@@ -21,10 +21,10 @@ export default function Navigation({ variant = "default" }: NavigationProps) {
             <Link href="/" className="inline-block">
               <Image
                 className="h-8 w-auto"
-                src={isWhite ? "/images/logo-white.svg" : "/images/logo.svg"}
-                alt="Logo"
-                width={120}
-                height={32}
+                src={isWhite ? "/images/peoples-group-logo.svg" : "/images/peoples-group-logo.svg"}
+                alt="People's Group logo"
+                width={140}
+                height={38}
               />
             </Link>
             <ul className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
@@ -32,7 +32,7 @@ export default function Navigation({ variant = "default" }: NavigationProps) {
                 <Link
                   className={`inline-block ${
                     isWhite
-                      ? "text-white hover:text-lime-500"
+                      ? "text-white hover:text-cyan-400"
                       : "text-teal-900 hover:text-teal-700"
                   } font-medium`}
                   href="/about"
@@ -44,7 +44,7 @@ export default function Navigation({ variant = "default" }: NavigationProps) {
                 <Link
                   className={`inline-block ${
                     isWhite
-                      ? "text-white hover:text-lime-500"
+                      ? "text-white hover:text-cyan-400"
                       : "text-teal-900 hover:text-teal-700"
                   } font-medium`}
                   href="/pricing"
@@ -56,7 +56,7 @@ export default function Navigation({ variant = "default" }: NavigationProps) {
                 <Link
                   className={`inline-block ${
                     isWhite
-                      ? "text-white hover:text-lime-500"
+                      ? "text-white hover:text-cyan-400"
                       : "text-teal-900 hover:text-teal-700"
                   } font-medium`}
                   href="/contact"
@@ -68,7 +68,7 @@ export default function Navigation({ variant = "default" }: NavigationProps) {
                 <Link
                   className={`inline-block ${
                     isWhite
-                      ? "text-white hover:text-lime-500"
+                      ? "text-white hover:text-cyan-400"
                       : "text-teal-900 hover:text-teal-700"
                   } font-medium`}
                   href="/blog"
@@ -111,20 +111,12 @@ export default function Navigation({ variant = "default" }: NavigationProps) {
                     </span>
                   </Link>
                 ) : (
-                  <div className="hidden md:block">
-                    <Link
-                      href="/login"
-                      className="inline-flex py-2.5 px-4 mr-3 lg:mr-4 items-center justify-center text-sm font-medium text-teal-900 hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="inline-flex py-2.5 px-4 items-center justify-center text-sm font-medium text-white border border-teal-900 hover:border-black bg-teal-900 hover:bg-black rounded-full transition duration-200"
-                    >
-                      Get in touch
-                    </Link>
-                  </div>
+                  <Link
+                    href="/contact"
+                    className="inline-flex py-2.5 px-4 items-center justify-center text-sm font-medium text-white border border-teal-900 hover:border-black bg-teal-900 hover:bg-black rounded-full transition duration-200"
+                  >
+                    Get in touch
+                  </Link>
                 )}
               </div>
               <button
@@ -184,19 +176,13 @@ export default function Navigation({ variant = "default" }: NavigationProps) {
             <Link href="/" className="inline-block">
               <Image
                 className="h-8 w-auto"
-                src="/fauna-assets/logos/sign-logo-flow.svg"
-                alt="Logo"
-                width={120}
-                height={32}
+                src="/images/peoples-group-logo.svg"
+                alt="People's Group logo"
+                width={140}
+                height={38}
               />
             </Link>
             <div className="flex items-center">
-              <Link
-                href="/login"
-                className="inline-flex py-2.5 px-4 mr-6 items-center justify-center text-sm font-medium text-teal-900 hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
-              >
-                Login
-              </Link>
               <button onClick={() => setMobileNavOpen(false)}>
                 <svg
                   width="32"

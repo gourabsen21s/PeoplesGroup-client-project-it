@@ -79,7 +79,7 @@ export const NavItems = ({
           onClick={onItemClick}
         >
           {item.name}
-          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-lime-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
         </Link>
       ))}
     </div>
@@ -198,10 +198,10 @@ export const NavbarButton = ({
   const Component = as;
   
   const variants = {
-    primary: "bg-lime-500 hover:bg-lime-600 text-teal-900 border-lime-500",
+    primary: "bg-cyan-500 hover:bg-cyan-600 text-white border-cyan-500",
     secondary: "bg-transparent hover:bg-neutral-100 text-neutral-700 border-neutral-300",
     dark: "bg-teal-900 hover:bg-black text-white border-teal-900",
-    gradient: "bg-gradient-to-r from-lime-500 to-teal-500 hover:from-lime-600 hover:to-teal-600 text-white border-transparent",
+    gradient: "bg-gradient-to-r from-cyan-400 to-teal-500 hover:from-cyan-500 hover:to-teal-600 text-white border-transparent",
   };
 
   return (

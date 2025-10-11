@@ -1,15 +1,33 @@
+"use client";
+
 import ResizableNavigation from "@/components/ResizableNavigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 export default function Blog() {
   return (
     <div className="">
       <ResizableNavigation />
-      <div>
-        <section className="overflow-hidden pt-24">
-          <div className="container mx-auto px-4 py-16">
+      <div className="p-4 bg-white">
+        <section className="relative overflow-hidden pt-24 rounded-3xl">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="rgb(240, 253, 244)"
+            gradientBackgroundEnd="rgb(204, 251, 241)"
+            firstColor="190, 242, 100"
+            secondColor="20, 184, 166"
+            thirdColor="163, 230, 53"
+            fourthColor="94, 234, 212"
+            fifthColor="167, 243, 208"
+            pointerColor="45, 212, 191"
+            size="80%"
+            blendingValue="hard-light"
+            containerClassName="absolute inset-0"
+            className="absolute inset-0"
+            interactive={false}
+          />
+          <div className="container mx-auto px-4 py-16 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl tracking-tight mb-8">
                 Our Blog
@@ -21,14 +39,30 @@ export default function Blog() {
           </div>
         </section>
       </div>
-      <section className="py-12 lg:py-24">
-        <div className="container mx-auto px-4">
+      <section className="p-4 bg-white">
+        <div className="relative py-12 lg:py-24 rounded-3xl overflow-hidden">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="rgb(254, 249, 195)"
+            gradientBackgroundEnd="rgb(254, 215, 170)"
+            firstColor="190, 242, 100"
+            secondColor="251, 191, 36"
+            thirdColor="254, 215, 170"
+            fourthColor="251, 146, 60"
+            fifthColor="253, 224, 71"
+            pointerColor="245, 158, 11"
+            size="80%"
+            blendingValue="hard-light"
+            containerClassName="absolute inset-0"
+            className="absolute inset-0"
+            interactive={false}
+          />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="mb-16">
             <div className="flex flex-wrap -mx-4">
               <div className="w-full lg:w-2/3 px-4 mb-8 lg:mb-0">
                 <Image
                   className="w-full rounded-3xl mb-6"
-                  src="/fauna-assets/blog/image-lg-post.png"
+                  src="/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.52_a5f755af.jpg"
                   alt="Featured Post"
                   width={800}
                   height={500}
@@ -48,7 +82,7 @@ export default function Blog() {
                 <div className="flex items-center mb-6">
                   <Image
                     className="w-12 h-12 rounded-full mr-4"
-                    src="/fauna-assets/blog/avatar-1.png"
+                    src="/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_95252a5b.jpg"
                     alt="Author"
                     width={48}
                     height={48}
@@ -73,7 +107,7 @@ export default function Blog() {
                       <div key={i} className="flex items-start">
                         <Image
                           className="w-20 h-20 rounded-xl mr-4 flex-shrink-0"
-                          src={`/fauna-assets/blog/image-sm-${i}.png`}
+                          src={`/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.52_c7b4ab9e.jpg`}
                           alt={`Post ${i}`}
                           width={80}
                           height={80}
@@ -94,7 +128,7 @@ export default function Blog() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                image: "/fauna-assets/blog/image-post2-1.png",
+                image: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_adb4b8ea.jpg",
                 title: "How Microservices Architecture is Transforming Enterprise Software",
                 excerpt:
                   "Modern application architecture is evolving rapidly with the adoption of microservices and containerization.",
@@ -102,7 +136,7 @@ export default function Blog() {
                 date: "May 12, 2024",
               },
               {
-                image: "/fauna-assets/blog/image-post2-2.png",
+                image: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.51_b4feb97b.jpg",
                 title: "Cybersecurity: Modern Threats, Advanced Solutions",
                 excerpt:
                   "Exploring how traditional security approaches are being reinvented for the cloud era.",
@@ -110,7 +144,7 @@ export default function Blog() {
                 date: "May 10, 2024",
               },
               {
-                image: "/fauna-assets/blog/image-sm-1.png",
+                image: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.53_02dbe1d4.jpg",
                 title: "The Economics of Cloud Migration in 2025",
                 excerpt:
                   "Analyzing cost trends and ROI opportunities when moving to cloud infrastructure.",
@@ -118,7 +152,7 @@ export default function Blog() {
                 date: "May 8, 2024",
               },
               {
-                image: "/fauna-assets/blog/image-sm-2.png",
+                image: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.53_e2cdec9d.jpg",
                 title: "DevOps: The Key to Continuous Delivery",
                 excerpt:
                   "How modern DevOps practices are solving deployment challenges and accelerating release cycles.",
@@ -126,7 +160,7 @@ export default function Blog() {
                 date: "May 5, 2024",
               },
               {
-                image: "/fauna-assets/blog/image-sm-3.png",
+                image: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.53_f9406baa.jpg",
                 title: "Low-Code Platforms: A Growing Trend",
                 excerpt:
                   "Why low-code development tools are making software creation accessible to more people.",
@@ -134,7 +168,7 @@ export default function Blog() {
                 date: "May 3, 2024",
               },
               {
-                image: "/fauna-assets/blog/image-post2-1.png",
+                image: "/fauna-assets/new/WhatsApp Image 2025-10-08 at 18.23.54_92e16c7d.jpg",
                 title: "Kubernetes: The Platform of Tomorrow",
                 excerpt:
                   "Understanding the potential of container orchestration for scaling modern applications.",
@@ -160,7 +194,7 @@ export default function Blog() {
                   <p className="text-gray-700 mb-4">{post.excerpt}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-lime-500 rounded-full mr-2"></div>
+                      <div className="w-8 h-8 bg-cyan-500 rounded-full mr-2"></div>
                       <span className="text-sm font-medium">{post.author}</span>
                     </div>
                     <Link
@@ -179,6 +213,7 @@ export default function Blog() {
               Load More Articles
             </button>
           </div>
+        </div>
         </div>
       </section>
       <Footer />

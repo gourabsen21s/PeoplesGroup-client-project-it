@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Visit www.pixelrocket.store to learn how to become a frontend web developer",
-  description: "FaunaFlora - Green Energy Solutions",
+  title: "Peoples Group  - It Services and Solutions",
+  description: "Peoples Group is a leading IT services and solutions provider, delivering innovative technology solutions to businesses worldwide.",
   icons: {
     icon: "/favicon.png",
   },
