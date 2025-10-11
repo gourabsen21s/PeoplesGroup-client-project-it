@@ -461,27 +461,28 @@ const config: Config = {
             relaxed: "1.625",
             loose: "2",
           },
-          maxWidth: (theme: any, { breakpoints }: any) => ({
-            none: "none",
-            0: "0rem",
-            xs: "20rem",
-            sm: "24rem",
-            md: "28rem",
-            lg: "32rem",
-            xl: "36rem",
-            "2xl": "42rem",
-            "3xl": "48rem",
-            "4xl": "50rem",
-            "5xl": "56rem",
-            "6xl": "63rem",
-            "7xl": "72rem",
-            "8xl": "76rem",
-            full: "100%",
-            min: "min-content",
-            max: "max-content",
-            prose: "65ch",
-            ...breakpoints(theme("screens")),
-          }),
+          maxWidth: ({ theme, breakpoints }: any) => ({
+  none: "none",
+  0: "0rem",
+  xs: "20rem",
+  sm: "24rem",
+  md: "28rem",
+  lg: "32rem",
+  xl: "36rem",
+  "2xl": "42rem",
+  "3xl": "48rem",
+  "4xl": "50rem",
+  "5xl": "56rem",
+  "6xl": "63rem",
+  "7xl": "72rem",
+  "8xl": "76rem",
+  full: "100%",
+  min: "min-content",
+  max: "max-content",
+  prose: "65ch",
+  ...breakpoints(theme("screens")),
+}),
+
           outline: {
             none: ["2px solid transparent", "2px"],
             white: ["2px dotted white", "2px"],
@@ -529,5 +530,6 @@ const config: Config = {
   },
 };
 export default config;
+
 
 
